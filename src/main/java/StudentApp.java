@@ -46,7 +46,7 @@ public class StudentApp {
   public void start() {
     this.studentRegister.fillRegisterWithDefaultStudents();
 
-    System.out.println("*****  Student Register App v0.2 *****");
+    System.out.println("*****  Student Register App v0.3 *****");
     System.out.println(); // Prints an empty line
     System.out.println("Welcome to this fantastic application :-)");
 
@@ -57,7 +57,7 @@ public class StudentApp {
 
     // Print name of student
     System.out.println("Name of student at pos 1: " + foundStudent.getName());
-    System.out.println("Age of thudent at pos 1: " + foundStudent.getAge());
+    System.out.println("Age of student at pos 1: " + foundStudent.getAge());
 
     // Print all students
     this.printAllStudents();
@@ -78,7 +78,7 @@ public class StudentApp {
    * all programming languages must implement this method in order for the OS to be able to find
    * which method to call to start the application.
    *
-   * <p>Since Java is a "pure" Object Oriented language, nothing happens without an object, so the
+   * <p>Since Java is a "pure" Object-Oriented language, nothing happens without an object, so the
    * first thing that we need to do in this main()-method, is to create the instance of the class
    * responsible for playing the role of the application as such; here the StudentApp-class.
    *
