@@ -1,7 +1,7 @@
 import java.util.Iterator;
 
 /**
- * Represents the application wich can handle one or more students, and
+ * Represents the application which can handle one or more students, and
  * calculate the average age.
  *
  * @author (your name)
@@ -10,6 +10,9 @@ import java.util.Iterator;
 public class StudentApp {
   private StudentRegister studentRegister;
 
+  /**
+   * Creates an instance of StudentApp.
+   */
   public StudentApp() {
     this.studentRegister = new StudentRegister();
   }
@@ -25,6 +28,9 @@ public class StudentApp {
     System.out.println("Student ID of student: " + student.getStudentId());
   }
 
+  /**
+   * Prints all students in the register to the console.
+   */
   public void printAllStudents() {
 
     Iterator<Student> it = this.studentRegister.iterator();
@@ -54,8 +60,6 @@ public class StudentApp {
     System.out.println("Age of thudent at pos 1: " + foundStudent.getAge());
 
     // Print all students
-    //this.studentRegister.printAllStudents2();
-
     this.printAllStudents();
 
     // Find student called Lise
@@ -73,12 +77,13 @@ public class StudentApp {
    * "start" your application. The syntax and name of this method is defined by the system, and
    * all programming languages must implement this method in order for the OS to be able to find
    * which method to call to start the application.
-   * <p>Since Java is a "pure" Object Oriented language, nothing happens without an object, so the first
-   * thing that we need to do in this main()-method, is to create the instance of the class
+   *
+   * <p>Since Java is a "pure" Object Oriented language, nothing happens without an object, so the
+   * first thing that we need to do in this main()-method, is to create the instance of the class
    * responsible for playing the role of the application as such; here the StudentApp-class.
-   * <p>
-   * After the instance have been created, we call the start()-method of the instance to start executing
-   * the student application.
+   *
+   * <p>After the instance have been created, we call the start()-method of the instance to
+   * start executing the student application.
    */
   public static void main(String[] args) {
     StudentApp studentApp = new StudentApp();

@@ -3,8 +3,8 @@ import java.util.Iterator;
 
 /**
  * Represents a register of students.
- * <p>
- * The following functionality is implemented:
+ *
+ * <p>The following functionality is implemented:
  * <ul>
  *   <li>Search for a student by name</li>
  *   <li>Add a student</li>
@@ -14,8 +14,8 @@ import java.util.Iterator;
  *   <li>List all students</li>
  * </ul>
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Arne Styve
+ * @version 2023-09-19
  */
 public class StudentRegister {
   private ArrayList<Student> students;
@@ -58,9 +58,9 @@ public class StudentRegister {
 
   /**
    * Searches the register for a student with the given name.
-   * If no students found matching the name, null is returned.
-   * <p>
-   * In this version we use the for-each loop resulting in the last student
+   * xf no students found matching the name, null is returned.
+   *
+   * <p>In this version we use the for-each loop resulting in the last student
    * in the register with a matching name being returned.
    *
    * @param name the name of the student to search for
@@ -82,8 +82,8 @@ public class StudentRegister {
   /**
    * Searches the register for a student with the given name.
    * If no students found matching the name, null is returned.
-   * <p>
-   * In this version we use the while loop resulting in the first student
+   *
+   * <p>In this version we use the while loop resulting in the first student
    * in the register with a matching name being returned.
    *
    * @param name the name of the student to search for
@@ -110,8 +110,8 @@ public class StudentRegister {
   /**
    * Searches the register for a student with the given name.
    * If no students found matching the name, null is returned.
-   * <p>
-   * In this version we use the while loop with iterator resulting in the
+   *
+   * <p>In this version we use the while loop with iterator resulting in the
    * first student in the register with a matching name being returned.
    *
    * @param name the name of the student to search for
@@ -138,11 +138,16 @@ public class StudentRegister {
    */
   public void fillRegisterWithDefaultStudents() {
     this.addStudent(new Student("Lise", 34, "787878"));
-    this.addStudent(new Student("Jens", 34, "787878"));
-    this.addStudent(new Student("Lars", 34, "787878"));
-    this.addStudent(new Student("Trine", 34, "787878"));
+    this.addStudent(new Student("Jens", 24, "625342"));
+    this.addStudent(new Student("Lars", 28, "324354"));
+    this.addStudent(new Student("Trine", 22, "975645"));
   }
 
+  /**
+   * Returns an iterator for the register.
+   *
+   * @return an iterator for the register.
+   */
   public Iterator<Student> iterator() {
     return this.students.iterator();
   }
