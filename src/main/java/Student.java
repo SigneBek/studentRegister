@@ -5,6 +5,7 @@
  * @author Arne
  * @version 2023-08-28
  */
+
 public class Student {
   // Felt (variabler)
   private String name;
@@ -12,7 +13,6 @@ public class Student {
   private String studentId; //Must be 6 numbers - "032456"
 
   // Konstruktør(er)
-
   /**
    * Creates an istance of Student.
    *

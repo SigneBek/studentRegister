@@ -18,7 +18,9 @@ The project contains 3 classes:
 
 ## Releases
 | Release | Description                                                                                                                            |
-| ------- |----------------------------------------------------------------------------------------------------------------------------------------|
+| ------- |----------------------------------------------------------------------------------------------------------------------------------------|  
+| [v0.5] | Introduced the HashMap-class, and preformed a bunch of refactoring |
+| [v0.4] | Introduced the Scanner-class |
 | [v0.3] | Introduced the Iterator-class. Moved the **printAllStudents()**-method from the StudentRegister-class to the StudentRegisterApp-class. |
-| [v0.2] | Introduced the StudentRegister-class.                                                                                                  |
+| [v0.2] | Introduced the SStudentRegister-class.                                                                                                  |
 

@@ -1,5 +1,6 @@
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.HashMap;
 
 /**
  * Represents a register of students.
@@ -18,13 +19,14 @@ import java.util.Iterator;
  * @version 2023-09-19
  */
 public class StudentRegister {
-  private ArrayList<Student> students;
+  //private ArrayList<Student> students;
+  private HashMap<String, Student> students;
 
   /**
    * Creates an instance of StudentRegister.
    */
   public StudentRegister() {
-    this.students = new ArrayList<>();
+    this.students = new HashMap<>();
   }
 
   /**
@@ -33,7 +35,7 @@ public class StudentRegister {
    * @param student the student to be added.
    */
   public void addStudent(Student student) {
-    this.students.add(student);
+    this.students.put(student.getStudentId(), student);
   }
 
   /**
@@ -47,64 +49,14 @@ public class StudentRegister {
 
   /**
    * Returns the student at a given position in the register,
-   * given by the parameter index.
+   * given by the parameter studentID.
    *
-   * @param index the position of the student to return
-   * @return the student at a given position
+   * @param studentId the student ID of the student to return.
+   *                  If no student found, null is returned
+   * @return the student at a given Student ID
    */
-  public Student getStudentAt(int index) {
-    return this.students.get(index);
-  }
-
-  /**
-   * Searches the register for a student with the given name.
-   * xf no students found matching the name, null is returned.
-   *
-   * <p>In this version we use the for-each loop resulting in the last student
-   * in the register with a matching name being returned.
-   *
-   * @param name the name of the student to search for
-   * @return the student found with the given name
-   */
-  public Student findStudentByName(String name) {
-    Student foundStudent = null;
-
-    for (Student student : this.students) {
-      if (student.getName().equals(name)) {
-        foundStudent = student;
-        //break; //IKKE BRUK break!!!!! DA STRYKER DU TIL MAPPEVURDERINGEN!!!
-      }
-    }
-
-    return foundStudent;
-  }
-
-  /**
-   * Searches the register for a student with the given name.
-   * If no students found matching the name, null is returned.
-   *
-   * <p>In this version we use the while loop resulting in the first student
-   * in the register with a matching name being returned.
-   *
-   * @param name the name of the student to search for
-   * @return the student found with the given name
-   */
-  public Student findStudentByName2(String name) {
-    Student foundStudent = null;
-
-    int index = 0;
-
-    while ((foundStudent == null) && (index < this.students.size())) {
-      Student student = this.students.get(index);
-
-      if (student.getName().equals(name)) {
-        foundStudent = student;
-      }
-
-      index++;
-    }
-
-    return foundStudent;
+  public Student findStudentByStudentID(String studentId) {
+    return this.students.get(studentId);
   }
 
   /**
@@ -117,10 +69,10 @@ public class StudentRegister {
    * @param name the name of the student to search for
    * @return the student found with the given name
    */
-  public Student findStudentByName3(String name) {
+  public Student findStudentByName(String name) {
     Student foundStudent = null;
 
-    Iterator<Student> it = this.students.iterator();
+    Iterator<Student> it = this.students.values().iterator();
 
     while ((foundStudent == null) && it.hasNext()) {
       Student student = it.next(); // Returns next student in collection
@@ -149,6 +101,6 @@ public class StudentRegister {
    * @return an iterator for the register.
    */
   public Iterator<Student> iterator() {
-    return this.students.iterator();
+    return this.students.values().iterator();
   }
 }
