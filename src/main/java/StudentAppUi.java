@@ -46,7 +46,7 @@ public class StudentAppUi {
     public void start() {
         this.studentRegister.fillRegisterWithDefaultStudents();
 
-        System.out.println("*****  Student Register App v0.3 *****");
+        System.out.println("*****  Student Register App v0.5 *****");
         System.out.println(); // Prints an empty line
         System.out.println("Welcome to this fantastic application :-)");
 
