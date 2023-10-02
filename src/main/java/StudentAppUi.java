@@ -2,7 +2,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 /**
- * Represents the USer Interface of the Student Application
+ * Represents the User Interface of the Student Application
  */
 
 public class StudentAppUi {
@@ -55,7 +55,7 @@ public class StudentAppUi {
         boolean finished = false;
         while (!finished) {
             //Ask the user to sreate new student
-            //Until they are bored..
+            //Until they are bored.
             System.out.println("Do you want to add a new a student (y/n)?");
 
             Scanner inputScanner = new Scanner(System.in);
